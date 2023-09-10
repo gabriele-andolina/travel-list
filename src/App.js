@@ -3,6 +3,7 @@ export default function App() {
         <div>
             <Logo />
             <Form />
+            <PackingList />
         </div>
     );
 }
@@ -17,5 +18,7 @@ function Form() {
         </div>
     );
 }
-function PackingList() {}
+function PackingList() {
+    return <div className="list">List</div>;
+}
 function Stats() {}
