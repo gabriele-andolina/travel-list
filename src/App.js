@@ -1,9 +1,10 @@
 export default function App() {
     return (
-        <div>
+        <div className="app">
             <Logo />
             <Form />
             <PackingList />
+            <Stats />
         </div>
     );
 }
@@ -21,4 +22,13 @@ function Form() {
 function PackingList() {
     return <div className="list">List</div>;
 }
-function Stats() {}
+function Stats() {
+    return (
+        <footer>
+            <em>
+                💼You have X items on your list, and you've already packed X
+                (X%).
+            </em>
+        </footer>
+    );
+}
