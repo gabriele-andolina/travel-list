@@ -27,6 +27,8 @@ function Form() {
     function handleSubmission(e) {
         e.preventDefault();
 
+        if (!description) return;
+
         const newItem = {
             description,
             quantity,
