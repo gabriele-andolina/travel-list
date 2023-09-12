@@ -36,6 +36,9 @@ function Form() {
             id: Date.now(),
         };
         console.log(newItem);
+
+        setQuantity(1);
+        setDescription("");
     }
 
     return (
