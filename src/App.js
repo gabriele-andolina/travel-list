@@ -20,9 +20,15 @@ export default function App() {
 function Logo() {
     return <h1>🏝 Far Away 🧳</h1>;
 }
+
 function Form() {
     const [description, setDescription] = useState("");
     const [quantity, setQuantity] = useState(1);
+    const [items, setItems] = useState([]);
+
+    function handleAddItems(item) {
+        setItems((items) => [...items, item]);
+    }
 
     function handleSubmission(e) {
         e.preventDefault();
@@ -36,6 +42,8 @@ function Form() {
             id: Date.now(),
         };
         console.log(newItem);
+
+        handleAddItems(newItem);
 
         setQuantity(1);
         setDescription("");
